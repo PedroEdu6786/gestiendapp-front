@@ -1,14 +1,14 @@
 import { Box, Center } from '@chakra-ui/react'
-import Form from '../../src/components/Form'
+import Login from '../../src/components/Login'
 
-const Login = () => {
+const index = () => {
   return (
     <Box>
       <Center m="15rem">
-        <Form />
+        <Login />
       </Center>
     </Box>
   )
 }
 
-export default Login
+export default index
