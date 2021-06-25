@@ -9,6 +9,10 @@ type Inputs = {
   password: string
 }
 
+export const onSubmit: SubmitHandler<Inputs> = (data) => {
+  console.log(data)
+}
+
 const Login = () => {
   const {
     register,
@@ -16,9 +20,6 @@ const Login = () => {
     formState: { errors },
   } = useForm<Inputs>()
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data)
-  }
   return (
     <VStack
       p="5rem"
