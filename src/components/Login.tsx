@@ -5,13 +5,11 @@ import FormField from './molecules/FormField'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 type Inputs = {
-  firstName: string
-  lastName: string
   email: string
   password: string
 }
 
-const Register = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
@@ -30,7 +28,7 @@ const Register = () => {
       spacing="1.5rem"
     >
       <Center>
-        <Title>Sign Up</Title>
+        <Title>Sign In</Title>
       </Center>
       <VStack
         as="form"
@@ -38,20 +36,6 @@ const Register = () => {
         spacing="1rem"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <FormField
-          fieldId="firstName"
-          label="First Name"
-          placeholder="John"
-          register={register('firstName', { required: true })}
-          error={errors.firstName}
-        />
-        <FormField
-          fieldId="lastName"
-          label="Last Name"
-          placeholder="Doe"
-          register={register('lastName', { required: true })}
-          error={errors.lastName}
-        />
         <FormField
           fieldId="email"
           label="Email"
@@ -66,10 +50,10 @@ const Register = () => {
           register={register('password', { required: true })}
           error={errors.password}
         />
-        <ButtonSubmit>Sign Up</ButtonSubmit>
+        <ButtonSubmit>Sign in</ButtonSubmit>
       </VStack>
     </VStack>
   )
 }
 
-export default Register
+export default Login

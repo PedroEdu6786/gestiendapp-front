@@ -10,4 +10,6 @@ export interface IField {
   fieldId: string
   label: string
   placeholder: string
+  register: any
+  error: any
 }

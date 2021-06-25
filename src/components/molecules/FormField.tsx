@@ -1,14 +1,23 @@
 import { FC } from 'react'
-import { FormControl } from '@chakra-ui/react'
+import { FormControl, FormHelperText } from '@chakra-ui/react'
 import { IField } from '../../utils/interfaces'
 import InputLabel from '../atoms/InputLabel'
 import InputForm from '../atoms/InputForm'
 
-const FormField: FC<IField> = ({ fieldId, label, placeholder }) => {
+const FormField: FC<IField> = ({
+  fieldId,
+  label,
+  placeholder,
+  register,
+  error,
+}) => {
   return (
     <FormControl id={fieldId}>
       <InputLabel>{label}</InputLabel>
-      <InputForm placeholder={placeholder} />
+      <InputForm placeholder={placeholder} {...register} />
+      {error && (
+        <FormHelperText color="red.300">This field is required</FormHelperText>
+      )}
     </FormControl>
   )
 }
