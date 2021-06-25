@@ -1,7 +1,7 @@
 import { Box, Center } from '@chakra-ui/react'
 import Login from '../../src/components/Login'
 
-const index = () => {
+const Home = () => {
   return (
     <Box>
       <Center m="15rem">
@@ -11,4 +11,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Home
